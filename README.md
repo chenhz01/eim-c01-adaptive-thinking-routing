@@ -41,6 +41,31 @@ python components/p01-no-think-draft-agreement-router/selftest.py    # 断言 + 
 | `P03` | confidence-gated-reasoning-switcher | 置信度门控：confidence>=hi 用 fast；<=lo 用 slow；中间用 medium。 | `components/p03-confidence-gated-reasoning-switcher/` |
 | `P04` | cot-compression-router | 保留首步、末步与信息密度最高的 k 步，其余丢弃，按比例压缩 CoT。 | `components/p04-cot-compression-router/` |
 
+### 深度文档状态（v1.1.0，四件已全部升级）
+
+本簇四个组件的 README 已全部升级到 **2 万字以上**的深度文档，
+每个组件都附带一个可复跑的基准脚本，文档中所有结论性数字都可由该脚本复现。
+**四个组件的 headline 结论全部是负面结论，并且都写在正文而非附录里**——
+这是本家族的评测协议要求的：没有负对照的性能声称不算证据。
+
+| ID | 深度文档字数 | headline 结论（负面，已写在正文） | 独立仓 |
+|---|---|---|---|
+| `P01` | 21,446 | 一致性分数在多数配置下弱于「直接深思」的朴素基线 | `eim-p01-no-think-draft-agreement-router` |
+| `P02` | 21,742 | 饱和收益下按难度比例分配 **4.006**，输给均匀的 4.621（−13.3%）；理论最优给最难一步 **0** 预算 | `eim-p02-token-budget-thought-allocator` |
+| `P03` | 24,295 | 把置信度换成随机数后机制仍花掉 **66.6%** 的成本；坏信号比不用信号贵 **149%** | `eim-p03-confidence-gated-reasoning-switcher` |
+| `P04` | 23,472 | 当长度与重要性无关时 **0.437**，输给随机抽样的 0.508，且花得更多 | `eim-p04-cot-compression-router` |
+
+共享的三条判据（四份文档各自独立地收敛到同一组结论）：
+
+1. **零信息基线是必查项。** 把输入信号换成随机数再跑一次；
+   若机制仍能给出体面的读数，那么体面的读数就不能证明它有输入信息。
+   P03 测得结构占 66.6%，P04 测得有偏抽样会输给无偏抽样。
+2. **公平口径才可比。** 先锁定质量目标再比成本。
+   P02 与 P03 都因此发现：收益主要由任务分布决定，与机制的精巧程度关系不大。
+3. **静默失败比性能损失更贵。** 四个组件合计抓出 6 处静默行为：
+   P03 的 `pick(nan)` 走中档、P04 的非幂等与 `keep_ratio` 两端不兑现、
+   P02 的 floor 破预算。它们都不抛异常、不告警，只在事后才被发现。
+
 ## 该用 / 不该用 / 常见误用
 
 **该用**
