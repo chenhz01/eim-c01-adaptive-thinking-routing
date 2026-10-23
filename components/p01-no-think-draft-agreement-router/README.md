@@ -46,9 +46,9 @@ python selftest.py    # 跑自检（含输出快照比对）
 
 **双许可**：
 
-- **代码**：Apache-2.0 — 见 [LICENSE](LICENSE)
-- **文档/规范**：CC BY 4.0 — 见 [LICENSE-SPEC](LICENSE-SPEC)
+- **代码**：Apache-2.0 — 见 [LICENSE](../../LICENSE)
+- **文档/规范**：CC BY 4.0 — 见 [LICENSE-SPEC](../../LICENSE-SPEC)
 
 对外声明「符合 / 兼容 / 通过 EIM-1.0」时须署名：
 `EIM-1.0 · P01 · no-think-draft-agreement-router © 2026 chenhz01, CC BY 4.0`
-未作上述声明者可自由使用、商用、闭源、改名，无需署名。详见 [NOTICE](NOTICE)。
+未作上述声明者可自由使用、商用、闭源、改名，无需署名。详见 [NOTICE](../../NOTICE)。
