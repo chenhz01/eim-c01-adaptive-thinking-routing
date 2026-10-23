@@ -1,0 +1,13 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+规范名称：EIM-1.0 (Emergent Intelligence Mechanisms, spec v1.0) — 组件 P01 · no-think-draft-agreement-router
+作者：chenhz01
+
+官方法律文本：https://creativecommons.org/licenses/by/4.0/legalcode
+人类可读摘要：https://creativecommons.org/licenses/by/4.0/
+
+归属（attribution）格式要求：
+  在声明「符合 / 兼容 / 通过 EIM-1.0」时，须保留：
+  「EIM-1.0 · P01 · no-think-draft-agreement-router © 2026 chenhz01, CC BY 4.0」
+  并附规范链接：https://github.com/chenhz01/emergent-mechanisms
+
+说明：本规范层与代码层（Apache-2.0）并存，分别作用于文档与实现，互不冲突。

@@ -1,0 +1,20 @@
+C01 · Adaptive Thinking Routing (自适应思考路由) — EIM-1.0
+Copyright 2026 chenhz01
+
+本仓代码以 Apache License 2.0 授权（见 LICENSE）；
+本仓规范文本与文档以 Creative Commons Attribution 4.0 International 授权（见 LICENSE-SPEC）。
+
+组件清单（4 个）：
+  - P01 · no-think-draft-agreement-router
+  - P02 · token-budget-thought-allocator
+  - P03 · confidence-gated-reasoning-switcher
+  - P04 · cot-compression-router
+
+依据 CC BY 4.0 第 3 条，任何声明符合 EIM-1.0 规范（含本簇 C01）的实现，
+即须署名规范名称与版本（EIM-1.0）、簇标识（C01 · Adaptive Thinking Routing）、作者（chenhz01）及规范链接。
+
+推荐署名行：
+  「EIM-1.0 · C01 · Adaptive Thinking Routing © 2026 chenhz01, CC BY 4.0」
+
+规范名称：EIM-1.0 (Emergent Intelligence Mechanisms, spec v1.0) — 簇 C01 · Adaptive Thinking Routing
+规范链接：https://github.com/chenhz01/emergent-mechanisms
